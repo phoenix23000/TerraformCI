@@ -10,8 +10,15 @@ terraform {
  
   }
 
+terraform {
+cloud {
+    organization = "assed"
 
-
+    workspaces {
+      name = "TerraformCI"
+    }
+  }
+}
 provider "azurerm" {
   features {}
   skip_provider_registration = true
@@ -23,10 +30,9 @@ resource "random_string" "uniquestring" {
   upper   = false
 }
 
-
 resource "azurerm_resource_group" "rg" {
-  name     = "continuous-delivery-with-git"
-  location = "eastus"
+  name     = "assed-tp"
+  location = "westeurope"
 }
 
 resource "azurerm_storage_account" "storageaccount" {
