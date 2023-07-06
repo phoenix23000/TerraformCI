@@ -13,11 +13,7 @@ cloud {
       name = "TerraformCI"
     }
   }
-
-
   }
-
-
 
 provider "azurerm" {
   features {}
