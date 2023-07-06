@@ -23,6 +23,7 @@ resource "random_string" "uniquestring" {
   upper   = false
 }
 
+
 resource "azurerm_resource_group" "rg" {
   name     = "continuous-delivery-with-git"
   location = "eastus"
